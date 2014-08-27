@@ -8,11 +8,15 @@ public class Program {
 		Hilsen.SetNavn(JOptionPane.showInputDialog("Skriv navnet ditt: "));
 		Hilsen.SetHilsen(JOptionPane.showInputDialog("Skriv din hilsen: "));
 		
-		/** GetHilsen, 0 gir kun hilsningen som er lagret
-		* 1 gir "Din hilsen er:" + hilsning
+		/** GetNavn & GetHilsen:
+		* 0 gir kun verdien som er lagret
+		* 1 gir en hilsning etterfulgt av verdien
 		* alt annet gir null
 		*/ 
-		JOptionPane.showMessageDialog(null, Hilsen.GetHilsen(1));
+		String navn = Hilsen.GetNavn(1);
+		String hilsen = Hilsen.GetHilsen(1);
+		
+		JOptionPane.showMessageDialog(null, hilsen, navn, JOptionPane.PLAIN_MESSAGE);
 	}
 	
 }
