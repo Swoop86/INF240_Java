@@ -25,10 +25,17 @@ public class Greeting {
 	{
 		_navn = newValue;
 	}
-	public String GetNavn()
+	public String GetNavn(int option)
 	{
-		String hilsen = "Hallo " + _navn;
-		return hilsen;
+		if (option == 0) {return _navn; }
+		else if (option == 1)
+		{
+			String uttekst = "Hallo " + _navn;
+			return uttekst;
+		}
+		else {
+			return null;
+		}
 	}
 		
 }
