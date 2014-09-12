@@ -88,7 +88,7 @@ public class Programmet {
         valg = sc.next();
         for (Prosjekt element : prosjekt)
         {
-            if (element._prosjektTittel.equals(valg))
+            if (element.getProsjektTittel().equals(valg))
             {
                 VelgProsjekt(element);
             }
@@ -106,7 +106,7 @@ public class Programmet {
         Scanner sc = new Scanner(System.in);
 
             int valg;
-            System.out.println("Valg for " + prosjekt._prosjektTittel);
+            System.out.println("Valg for " + prosjekt.getProsjektTittel());
             System.out.println("1: Legg til pengebeløp");
             System.out.println("2: Slett pengebeløp");
             valg = sc.nextInt();
